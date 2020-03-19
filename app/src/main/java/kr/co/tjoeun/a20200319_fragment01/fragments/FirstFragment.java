@@ -7,33 +7,29 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import kr.co.tjoeun.a20200319_fragment01.R;
+import kr.co.tjoeun.a20200319_fragment01.databinding.FragmentBinding;
 
 public class FirstFragment extends Fragment {
+
+    FragmentBinding binding = null;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment,container,false) ;
+         binding = DataBindingUtil.inflate(inflater,R.layout.fragment,container,false) ;
+         return binding.getRoot();
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
 
-//            액티비티의 onCreat에 대응되는 메쏘드.
-        setupEvents();
-        setValues();
 
 
-    }
-
-    private void setupEvents() {
-    }
-
-    private void setValues() {
     }
 }
 
