@@ -18,13 +18,14 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:hint="ID 입력"
+            android:inputType="textEmailAddress"
             android:layout_marginTop="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Password"/>
+            android:layout_marginTop="15dp"
+            android:text="@string/password"/>
 
         <EditText
             android:id="@+id/pwEdt"
@@ -32,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Password 입력"/>
+            android:hint="@string/pw_input_hint"/>
 
         <Button
             android:id="@+id/loginBtn"
